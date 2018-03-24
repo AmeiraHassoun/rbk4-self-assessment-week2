@@ -19,7 +19,7 @@ describe('chat-client-fixme', function() {
 
     // Post a message and synchronously respond
     postData('why hello there', 'taser');
-    requests[0].respond(200, {}, '');
+    requests[0].respond(0, {}, '');//i make the time of respond =0 instead of 200
 
     // Assert that at least one function was called
     fns.filter(function(fn) {
@@ -48,7 +48,7 @@ describe('chat-client-fixme', function() {
 
     // Post a message and synchronously respond
     postData('why hello again', 'taser');
-    requests[0].respond(200, {}, '');
+    requests[0].respond(0, {}, '');// i make the time of respond =0 instead of 200 
 
     // Assert that getData was called
     window.getData.called.should.be.true;
@@ -86,7 +86,7 @@ describe('chat-client-fixme', function() {
     }).should.be.empty;
 
     // Simulate response
-    requests[0].respond(200, {}, '');
+    requests[0].respond(0, {}, '');//i make the time of respond =0 instead of 200
 
     // Assert that a function has been called
     fns.filter(function(fn) {
@@ -121,7 +121,7 @@ describe('chat-client-fixme', function() {
     window.getData.called.should.be.false;
 
     // Simulate response
-    requests[0].respond(200, {}, '');
+    requests[0].respond(0, {}, '');//i make the time of respond =0 instead of 200
 
     // Assert that getData has been called
     window.getData.called.should.be.true;
