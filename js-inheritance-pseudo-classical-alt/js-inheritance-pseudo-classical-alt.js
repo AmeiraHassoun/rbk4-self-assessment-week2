@@ -39,10 +39,16 @@ var makeFlyingHorse = function(name, color) {
 // Here's some starter code to get you going!
 
 var Horse = function(name) {
+  makeHorse.call(this, name);
+  Horse = Object.create(makeHorse.result);
+Horse.constructor = Horse;
 };
 
 
 var FlyingHorse = function(name, color) {
+  makeFlyingHorse.call(this, name, color);
+  FlyingHorse = Object.create(makeFlyingHorse.result);
+Horse.constructor = Horse;
 };
 
 
