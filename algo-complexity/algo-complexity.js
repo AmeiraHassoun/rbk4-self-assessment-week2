@@ -10,7 +10,7 @@
 /*
  Complexity:
  */
-
+//This function has [O(N)], because [for (var i = 0; i < key.length; i++)] means [that the instructions inside the loop will be repeated n times which n here is the key.length]
 
 var retrieve = function(key) {
   var hash = 0;
@@ -26,7 +26,7 @@ var retrieve = function(key) {
 /*
  Complexity:
  */
-
+//This function has [O(log(n))], because [ var center = Math.floor(array.length / 2);] means [that we are divideing the array an searching just in the part that we could find the elemnt in beacuse the array is sorted]
 
 var sortedArrayContainsItem = function(array, item) {
   var center = Math.floor(array.length / 2);
@@ -44,7 +44,7 @@ var sortedArrayContainsItem = function(array, item) {
  Complexity:
  */
 
-
+//This function has [O(n^2)], because [.indexOf(item)] means [that there is another loop insid it so it is a nested loop ]
 var hasDuplicates = function(array) {
   for (var i = 0; i < array.length; i++) {
     var item = array[i];
