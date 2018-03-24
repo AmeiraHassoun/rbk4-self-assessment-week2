@@ -117,11 +117,13 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
-      getData();// posting getData in  postData
-      displayData();
+      getData();// posting getData in postData as soon as the message has been clicked on sent.
+      //displayData(); //Should get data aswell
     },
     error: function(data) {
       console.log(data);
+    // should try again if the message has not been sent
+    
 
     }
   });
