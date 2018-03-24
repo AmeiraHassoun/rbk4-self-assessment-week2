@@ -10,7 +10,8 @@
 /*
  Complexity:
  */
-
+// This function has [O(1)] because we return the array with specific 
+//index wich is hash
 
 var retrieve = function(key) {
   var hash = 0;
@@ -26,6 +27,7 @@ var retrieve = function(key) {
 /*
  Complexity:
  */
+ //This function has [log(n)] because we take only the half of array
 
 
 var sortedArrayContainsItem = function(array, item) {
@@ -43,7 +45,8 @@ var sortedArrayContainsItem = function(array, item) {
 /*
  Complexity:
  */
-
+//This function has [O(n)] because we iterate through array and reach to the
+//worst case wich is n
 
 var hasDuplicates = function(array) {
   for (var i = 0; i < array.length; i++) {
