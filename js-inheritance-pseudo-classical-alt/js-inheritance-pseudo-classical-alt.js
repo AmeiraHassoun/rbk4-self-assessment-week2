@@ -56,7 +56,7 @@ FlyingHorse.prototype.constructor= FlyingHorse;
 
 FlyingHorse.prototype.goSomewhere=function(destination,milesToDestination){
   if(milesToDestination<10){
-    goSomewhere.call(this,destination)
+    Horse.prototype.goSomewhere.call(this,destination)
   }else{
     return name + ' is flying to ' + destination + '!'
   }
