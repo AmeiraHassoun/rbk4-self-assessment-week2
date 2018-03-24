@@ -8,7 +8,7 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity: This function has [O(n)], because [
+ Complexity: This function has [O(1)], because [
  for (var i = 0; i < key.length; i++) {
     hash = (hash + Math.pow(i, hash)) % array.length;
   }] 
@@ -59,7 +59,7 @@ var sortedArrayContainsItem = function(array, item) {
     }
   }
 ] means [
-using loop
+when we use loop that mean we force the code to repeat that make the same var(i)and var(hach) will take different value each time 
 ]
  */
 
