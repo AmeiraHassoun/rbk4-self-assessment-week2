@@ -8,7 +8,8 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity: Big O notation is 1 (constant); since retrieving values from the HashTable is 
+ based on Indexing from the storage array.
  */
 
 
@@ -24,7 +25,9 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity: Big O notation is n/2 --> log(n); since it looks like a binary search which means that
+ searching one of the sides of the sorted array and this will decrease the time complexity from linear (n) to
+ log(n).
  */
 
 
@@ -41,7 +44,8 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity: Big O notation is linear (n); because the worst case scenario if it goes through and search
+ the whole array.
  */
 
 

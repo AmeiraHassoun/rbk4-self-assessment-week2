@@ -8,6 +8,12 @@ $.ajaxPrefilter(function(settings, _, jqXHR) {
 
 var SERVER_URL = 'http://parse.shared.hackreactor.com/chatterbox/classes/messages';
 
+var init(){
+
+  getData(); // here is my change.
+
+}
+
 //This one calls the Parse server to grab data, and sends it to processData
 var getData = function() {
   $.ajax(SERVER_URL + '?order=-createdAt', {
@@ -104,6 +110,12 @@ var displayData = function(data, user) {
   });
 };
 
+
+// Answer:
+// postData function is responsible for sending the message into the parsing server since the ajax type is 'POST'
+// and the ajax data is JSON.stringify to convert the message parameters into strings to allow the parsing server to understand
+// them.
+
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,6 +127,9 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+
+      getData(); // here is my change.
+
     },
     error: function(data) {
       console.log(data);
