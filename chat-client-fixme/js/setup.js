@@ -11,6 +11,11 @@ var SERVER_URL = 'http://parse.shared.hackreactor.com/chatterbox/classes/message
 //This one calls the Parse server to grab data, and sends it to processData
 var getData = function() {
   $.ajax(SERVER_URL + '?order=-createdAt', {
+
+    //Mohammad Jozaa Note:
+    //here must be thing with get
+    type:'GET'
+
     contentType: 'application/json',
     success: function(data) {
       processData(data); // eslint-disable-line no-use-before-define
@@ -104,6 +109,8 @@ var displayData = function(data, user) {
   });
 };
 
+//this one to sent massage to the server
+
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,9 +122,20 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+
+      //Mohammad Jozaa Note:
+      //here we must make jquery code that when succes post it on the html 
+      // in the div that have the massge with user name
+      $.(#main).append(data)
+
     },
     error: function(data) {
       console.log(data);
     }
   });
 };
+
+//Mohammad Jozaa Note:
+// and in this too I am not good but i will try to do it without go to my note 
+// so after assement please told me if use note better or not use it 
+// and thanks for suppoting us
