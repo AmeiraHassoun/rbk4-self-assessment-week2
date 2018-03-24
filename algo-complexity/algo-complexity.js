@@ -9,6 +9,8 @@
 
 /*
  Complexity:
+ This function has a time complexity of n, since the length of the input equals the number of iterations.
+
  */
 
 
@@ -25,6 +27,8 @@ var retrieve = function(key) {
 
 /*
  Complexity:
+ This function has a time complexity of log(n), since the array is sorted and we are searching
+ 	half of the array at any given time.
  */
 
 
@@ -42,6 +46,9 @@ var sortedArrayContainsItem = function(array, item) {
 
 /*
  Complexity:
+ This function has a time complexity of n^2, since we have a for loop that will iterate depending
+ on the given array length, and inside the loop, there is the function indexOf() which will 
+ iterate to find the index of the given item.
  */
 
 

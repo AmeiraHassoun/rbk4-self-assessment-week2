@@ -104,6 +104,8 @@ var displayData = function(data, user) {
   });
 };
 
+//This is the function responsible for sending data to the server, since the type of the Ajax API 
+//is POST. 
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,6 +117,7 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      getData()
     },
     error: function(data) {
       console.log(data);
