@@ -11,7 +11,8 @@
  Complexity:
  */
 
-
+/*-This function has [O(n) complexity], because [we have one for loop] means [Retrieval of a value from a hash table using the following function with regard to the size of the hash table]
+*/
 var retrieve = function(key) {
   var hash = 0;
   for (var i = 0; i < key.length; i++) {
@@ -26,7 +27,8 @@ var retrieve = function(key) {
 /*
  Complexity:
  */
-
+/*-This function has [O(n*n) complexity], because [we used recurtion] means [sortedArrayContainsItem with regard to the length of the passed-in array]
+*/
 
 var sortedArrayContainsItem = function(array, item) {
   var center = Math.floor(array.length / 2);
@@ -43,7 +45,9 @@ var sortedArrayContainsItem = function(array, item) {
 /*
  Complexity:
  */
-
+/*-This function has [O(n) complexity], because [we have one for loop] means [hasDuplicates with regard to the length of the passed in array
+]
+*/
 
 var hasDuplicates = function(array) {
   for (var i = 0; i < array.length; i++) {
