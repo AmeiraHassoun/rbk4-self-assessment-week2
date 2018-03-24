@@ -12,7 +12,7 @@
  for (var i = 0; i < key.length; i++) {
     hash = (hash + Math.pow(i, hash)) % array.length;
   }] 
-  means [when we use loop that mean we force the code to repeat that make the same var(i)and var(hach) will take different value each time ]
+  means []
  */
 
 
@@ -59,7 +59,7 @@ var sortedArrayContainsItem = function(array, item) {
     }
   }
 ] means [
-when we use loop that mean we force the code to repeat that make the same var(i)and var(hach) will take different value each time 
+when we use loop that mean we force the code to repeat that make the same var(i)will take different value each time 
 ]
  */
 
