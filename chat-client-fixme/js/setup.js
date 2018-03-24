@@ -104,6 +104,9 @@ var displayData = function(data, user) {
   });
 };
 
+// AymanGhaith
+// the following function responsible for sending messages to the server
+// its type is POST and will post the message to the server URL. after stringifying the message.
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,7 +118,11 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      //AymanGhaith
+      // Here I should create a list item contains the data , and appending it to the main div under the ul tag.
+      // I need to practice more, I think all the code I need exist here in this file .
     },
+
     error: function(data) {
       console.log(data);
     }
