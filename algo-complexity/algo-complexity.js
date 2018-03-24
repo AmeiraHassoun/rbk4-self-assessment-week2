@@ -20,6 +20,14 @@ var retrieve = function(key) {
   return array[hash];
 };
 
+/////////////////////////////
+//if we considered getting the index of the key, the time complexity will be (O(n))-linear where n is the length of the key , but if we considered only the
+//retriving process after we get the index , the time complexity will be (constant), because we know the index and we can directly have it from the array
+//without searching
+///////////////////////////
+
+
+
 
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
@@ -36,6 +44,11 @@ var sortedArrayContainsItem = function(array, item) {
   var halfOfArray = item < array[center] ? array.slice(0, center) : array.slice(center);
   return sortedArrayContainsItem(halfOfArray, item);
 };
+////////////////////////
+// the time complexity is O(log n) ,, because we are using the binary search method every time we are dividing by 2 
+////////////////
+
+
 
 
 // Problem 3: hasDuplicates with regard to the length of the passed in array
@@ -54,3 +67,10 @@ var hasDuplicates = function(array) {
   }
   return false;
 };
+
+
+
+////////////////
+// the time complexity is O(n)-linear ,, because we have to ensure the all elements are not repeated ,, and in the worst case(having no repeated elements)
+// we will go through them all
+////////////////////
