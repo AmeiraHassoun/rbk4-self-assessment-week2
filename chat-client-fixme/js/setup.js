@@ -6,7 +6,19 @@ $.ajaxPrefilter(function(settings, _, jqXHR) {
 
 //-------------- BEGIN VARIABLE/FUNCTION DECLARATIONS ---------------------
 
-var SERVER_URL = 'http://parse.shared.hackreactor.com/chatterbox/classes/messages';
+ var SERVER_URL = 'http://parse.shared.hackreactor.com/chatterbox/classes/messages';
+// var sendMessage = function(message){
+//     $.ajax(SERVER_URL + '?order=-createdAt', {
+//     contentType: 'application/json',
+//     success: function(data) {
+//       processData(data); // eslint-disable-line no-use-before-define
+//     },
+//     error: function(data) {
+//       $('#error').prepend(' oh no').append('!');
+//     }
+//   });
+
+}
 
 //This one calls the Parse server to grab data, and sends it to processData
 var getData = function() {
