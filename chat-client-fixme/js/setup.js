@@ -115,7 +115,8 @@ var postData = function(message, username) {
       text: message
     }),
     success: function(data) {
-//here we called the function above because it calls the Parse server to grab data, and sends it to processDat.     
+//here we called the function above because it calls the Parse server to grab data,
+// and sends it to processDat for that any message sent to the server will appear in the chat log.     
       getData();
       console.log('Success!', data);
     },

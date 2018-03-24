@@ -8,10 +8,12 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
-Complexity:it has a O(1) because the key is defined there is no need for the iterating over every element */
+Complexity:it has a O(1) Complexity because the key is defined there is no need for the iterating over every element but i am not sure 
+ if it's an array the time Complexity will be O(n) because of the forloop it will iterait over every item in the array to figur out the result */
 
 
 var retrieve = function(key) {
+  console.log(key)
   var hash = 0;
   for (var i = 0; i < key.length; i++) {
     hash = (hash + Math.pow(i, hash)) % array.length;
