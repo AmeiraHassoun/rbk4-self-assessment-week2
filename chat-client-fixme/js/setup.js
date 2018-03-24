@@ -12,6 +12,7 @@ var SERVER_URL = 'http://parse.shared.hackreactor.com/chatterbox/classes/message
 var getData = function() {
   $.ajax(SERVER_URL + '?order=-createdAt', {
     contentType: 'application/json',
+    type: 'GET', // retrieve the messages?
     success: function(data) {
       processData(data); // eslint-disable-line no-use-before-define
     },
@@ -104,6 +105,7 @@ var displayData = function(data, user) {
   });
 };
 
+//The postData function sends a message to the chat box
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,9 +117,14 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      getData();// posting getData in postData as soon as the message has been clicked on sent.
+      //displayData(); //Should get data aswell
     },
     error: function(data) {
       console.log(data);
+    // should try again if the message has not been sent
+    
+
     }
   });
 };
