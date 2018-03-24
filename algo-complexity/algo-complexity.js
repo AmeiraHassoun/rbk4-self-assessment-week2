@@ -8,11 +8,11 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity:this function has N^2 time complexity because there is a loop cost n and inside the loop we have Math.pow which is cost also n so it is exponent and Big(O)=n^2;
  */
 
 
-var retrieve = function(key) {
+var retrieve = function(key) {// 
   var hash = 0;
   for (var i = 0; i < key.length; i++) {
     hash = (hash + Math.pow(i, hash)) % array.length;
@@ -24,7 +24,8 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity:this function  time complexity is log(n) because it is uses recursion  and every time it ignore half of the array, so the Big(O)=log(n);
+
  */
 
 
@@ -41,7 +42,7 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity:this function has N^2 time complexity because there is a loop cost n and inside the loop we have indexOf() function which is cost also n so it is exponent and Big(O)=n^2;
  */
 
 

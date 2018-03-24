@@ -51,7 +51,7 @@ var userSelectedGroup = {};
 var newestDate = new Date();
 var userSelected;
 
-var displayData = function(data, user) {
+var displayData = function(data, user) {// this responsible for sending the data because it is the main function which deliver data to the server
   var $results = [];
   var resultCount = 0;
 
@@ -69,7 +69,12 @@ var displayData = function(data, user) {
       var $timeStamp = $('<span></span>').text(timestamp);
 
       if (userSelectedGroup[data.results[i].username]) {
-        $message.addClass('highlight');
+        if (window.XMLHttpRequest) { 
+           httpRequest = new XMLHttpRequest();
+      } 
+      
+        httpRequest.onreadystatechange = $message.addClass('highlight');
+        
       }
 
       $result.html([$userName, $timeStamp, $likeUser, $message]);
