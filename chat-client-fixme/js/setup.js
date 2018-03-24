@@ -50,7 +50,8 @@ var checkNewData = function(data) {
 var userSelectedGroup = {};
 var newestDate = new Date();
 var userSelected;
-
+// checking for new data and insert them inside our chat
+// put it take array of data 
 var displayData = function(data, user) {
   var $results = [];
   var resultCount = 0;
@@ -104,6 +105,7 @@ var displayData = function(data, user) {
   });
 };
 
+// our Sending Data function that use Ajax POST method 
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,6 +117,11 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      var message = {
+        username: username,
+        text: message
+      }
+      getData(); // call getData() to update our messages as soon as our message posted successfuly 
     },
     error: function(data) {
       console.log(data);
