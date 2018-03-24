@@ -104,6 +104,8 @@ var displayData = function(data, user) {
   });
 };
 
+
+// postData is responsible of sending data.
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
