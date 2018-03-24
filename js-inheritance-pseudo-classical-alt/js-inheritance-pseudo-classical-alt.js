@@ -39,10 +39,31 @@ var makeFlyingHorse = function(name, color) {
 // Here's some starter code to get you going!
 
 var Horse = function(name) {
+  this.result = {}
+  this.result.name = name
 };
+
+this.result.goSomewhere = function(destination){
+  return this.name + ' is galloping ' + destination + '!'
+}
 
 
 var FlyingHorse = function(name, color) {
+  this.result = this.makeHorse(name)
+  this.result.color = color
+  this.oldGoSomewhere = this.result.goSomewhere
+
 };
+
+this.result.goSomewhere = function (destination, milesToDestination){
+  if (milesToDestination < 10){
+    return this.oldGoSomewhere(destination);
+  } else {
+    return this.result.name + ' is flying to ' + destination + '!';
+  }
+  return this.result
+}
+
+
 
 
