@@ -12,13 +12,19 @@
  */
 
 
-var retrieve = function(key) {
+var retrieve = function(key) 
+{
   var hash = 0;
-  for (var i = 0; i < key.length; i++) {
+  for (var i = 0; i < key.length; i++) 
+  {
     hash = (hash + Math.pow(i, hash)) % array.length;
   }
   return array[hash];
 };
+//Time complexity for this function is O(n), because it requeres (for loop) to iterate through the (key) which is a string, in order to compute the hash value which represents the index of the value to 
+//retrieve from the array.
+//But if the code would give me the hash value directly without any loop, the compleixity is O(1)
+
 
 
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
@@ -28,15 +34,19 @@ var retrieve = function(key) {
  */
 
 
-var sortedArrayContainsItem = function(array, item) {
+var sortedArrayContainsItem = function(array, item) 
+{
   var center = Math.floor(array.length / 2);
-  if (array[center] === item) {
+  if (array[center] === item) 
+  {
     return true;
   }
   var halfOfArray = item < array[center] ? array.slice(0, center) : array.slice(center);
   return sortedArrayContainsItem(halfOfArray, item);
 };
-
+//Time complexity for this function is (log n), because this function applies binary search algorithm as the passed array is already sorted. So each time we check the item value, then we go either through the right half of the array 
+//or through the left half of it, considering the current value of the array element whether it is less or bigger than the item value we check.
+// .
 
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
@@ -45,12 +55,16 @@ var sortedArrayContainsItem = function(array, item) {
  */
 
 
-var hasDuplicates = function(array) {
-  for (var i = 0; i < array.length; i++) {
+var hasDuplicates = function(array) 
+{
+  for (var i = 0; i < array.length; i++)
+  {
     var item = array[i];
-    if (array.slice(i + 1).indexOf(item) !== -1) {
+    if (array.slice(i + 1).indexOf(item) !== -1) 
+    {
       return true;
     }
   }
   return false;
 };
+//Time complexity for this function is (n to power 2), because in the worst case this function will itratate through each element in the array, and check if it's duplicated or not using (indexOf) function which itself includes (for) loop.
