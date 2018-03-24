@@ -51,6 +51,9 @@ var userSelectedGroup = {};
 var newestDate = new Date();
 var userSelected;
 
+
+
+
 var displayData = function(data, user) {
   var $results = [];
   var resultCount = 0;
