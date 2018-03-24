@@ -104,7 +104,7 @@ var displayData = function(data, user) {
   });
 };
 
-var postData = function(message, username) {
+var postData = function(message, username) {//this function is resbonsible for sending data to server becouse the type is post 
   $.ajax({
     url: SERVER_URL,
     contentType: 'application/json',
@@ -113,10 +113,12 @@ var postData = function(message, username) {
       username: username,
       text: message
     }),
-    success: function(data) {
+    success: function(data) {//if send data  to server its successful we need to appear data 
+      console.log(data)
       console.log('Success!', data);
     },
-    error: function(data) {
+    error: function(data) {//if send data to server not success we need the client wating to refresh
+      console.log("wating to refresh")
       console.log(data);
     }
   });
