@@ -8,7 +8,11 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity: This function has [O(1)], because [
+ for (var i = 0; i < key.length; i++) {
+    hash = (hash + Math.pow(i, hash)) % array.length;
+  }] 
+  means []
  */
 
 
@@ -24,7 +28,13 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity:This function has [O(n) in best way (if array is already sorted)and O(n^2)if it's not],
+  because [
+ return sortedArrayContainsItem(halfOfArray, item);]
+  means [
+when we use Recursion (make the fanction repeat -one or more than one time-) that make the useing of memory more Complexity because of number of Operations 
+
+  ]
  */
 
 
@@ -41,7 +51,16 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity:This function has [O(n)], 
+ because [for (var i = 0; i < array.length; i++) {
+    var item = array[i];
+    if (array.slice(i + 1).indexOf(item) !== -1) {
+      return true;
+    }
+  }
+] means [
+when we use loop that mean we force the code to repeat that make the same var(i)will take different value each time 
+]
  */
 
 
