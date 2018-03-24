@@ -39,10 +39,45 @@ var makeFlyingHorse = function(name, color) {
 // Here's some starter code to get you going!
 
 var Horse = function(name) {
+  this.result={};
+  this.name=name;
+
 };
+
+
+Horse.prototype.goSomewhere=function(destination,milesToDestination){
+    if (milesToDestination < 10) {
+      return oldGoSomewhere(destination);
+    } else {
+      return this.name + ' is flying to ' + destination + '!';
+    }
+  };
+  return this.result;
+}
 
 
 var FlyingHorse = function(name, color) {
+  Horse.call(this,name);
+  this.color=color;
+  
 };
+
+  FlyingHorse.prototype=Object.creates(Horse.prototype)
+  FlyingHorse.prototype.constructor=FlyingHorse;
+  FlyingHorse.prototype.oldGoSomewhere=Horse.prototype.goSomewhere;
+
+
+  FlyingHorse.prototype.oldGoSomewhere=function(destination,milesToDestination){
+     if (milesToDestination < 10) {
+      return oldGoSomewhere(destination);
+    } else {
+      return this.name + ' is flying to ' + destination + '!';
+    }
+  };
+  return this.result;
+  }
+
+  var myHorse = new Horse();
+  var myFlyingHorse = new FlyingHorse();
 
 

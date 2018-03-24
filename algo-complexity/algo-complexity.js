@@ -8,7 +8,8 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity:O(n)-linear
+      -this Function has O(n),because of the for loop ,that means if we want to retrieve an element in the array it will go through the array n times that's why.
  */
 
 
@@ -24,7 +25,9 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity:O(n)-linear
+      -this Function has O(n),becasue of the slice because if we slice something in the middle the array will be shifted;
+
  */
 
 
@@ -41,7 +44,9 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity:O(n^3)
+      -this Function hs O(n^3),because of the for loop,slice and indexOf,in the for loop will iterate n times in the slice the array will be shifted, in the indexOf there will be iterate for the index of the item.
+      -here it means we have nested loops; 
  */
 
 
