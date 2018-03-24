@@ -2,18 +2,22 @@
   Write your explanation here as a comment.
   For example, you might say...
     -This function has [insert time complexity], because [some line of code] means [something describing the nature of the implementation]
+
 */
 
 
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity:  //key.length ???
+  //if you mean array.length so the Complexity of this function is O(n) because hash will take the array length number of
+  //operations 
  */
 
 
 var retrieve = function(key) {
   var hash = 0;
+
   for (var i = 0; i < key.length; i++) {
     hash = (hash + Math.pow(i, hash)) % array.length;
   }
@@ -24,7 +28,7 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity:the complexity here is O(log n) because it is increasing but in a little amount
  */
 
 
@@ -41,7 +45,8 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity: it is O(n2) because index of has hidden for loop so we have nested for loop that means we the number of 
+ operations will increase by big amount
  */
 
 

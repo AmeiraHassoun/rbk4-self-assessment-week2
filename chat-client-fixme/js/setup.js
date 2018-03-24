@@ -103,6 +103,8 @@ var displayData = function(data, user) {
     getData();
   });
 };
+ 
+//******* this function will send our message to the server ********//
 
 var postData = function(message, username) {
   $.ajax({
@@ -115,6 +117,8 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+//this line will invoke the method to get the data from the server
+      getData()
     },
     error: function(data) {
       console.log(data);
