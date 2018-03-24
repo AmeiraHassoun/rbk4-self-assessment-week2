@@ -39,10 +39,34 @@ var makeFlyingHorse = function(name, color) {
 // Here's some starter code to get you going!
 
 var Horse = function(name) {
+  this.result = {};
+  this.name = name;
 };
 
-
+Horse.prototype.goSomewhere = function(destination) {
+    return this.name + ' is galloping to ' + destination + '!';
+  };
+ 
 var FlyingHorse = function(name, color) {
+  Horse.call(this);
+  this.color = color;
+
 };
 
+FlyingHorse.prototype = Object.create(Horse.prototype);
+FlyingHorse.prototype.constructor = FlyingHorse;  
+FlyingHorse.prototype.oldGoSomewhere = this.goSomewhere()
+FlyingHorse.prototype.goSomewhere = function(destination, milesToDestination) {
+    if (milesToDestination < 10) {
+      return oldGoSomewhere(destination);
+    } else {
+      return this.name + ' is flying to ' + destination + '!';
+    }
+  };
+
+
+  //i dont know why the go somewhere  dont work and cant take the name in the child class
+  // really I am not so good in this subject
+  // i need more practice for this one and i use some note i write it from bees to figure 
+  // the large pic but that dont solve the problem
 
