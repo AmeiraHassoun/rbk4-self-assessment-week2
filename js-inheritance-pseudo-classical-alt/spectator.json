@@ -1,6 +1,0 @@
-{
-  "type": "browser",
-  "babel": true,
-  "src": [ "js-inheritance-pseudo-classical-alt.js" ],
-  "tests": [ "js-inheritance-pseudo-classical-alt.test.js" ]
-}
