@@ -9,6 +9,7 @@
 
 /*
  Complexity:
+ -This function has O(n), becouse it has only one for loop, it iterate through the array one time which means n time complexity,
  */
 
 
@@ -25,6 +26,11 @@ var retrieve = function(key) {
 
 /*
  Complexity:
+ -This one is tricky, i am not sure becouse it hase recursion, but i can say it has best 
+ case of O(1) but that is not counted here,so i think the complexcity according the worst case is O(n)
+ but aam not sure how we describe big O with recursion becouse it will keep iterating untill it returns, 
+ from that i can say it has O(n) but each time it iterates it apply somthing 'iff statement'
+  whish confuses me that it might be O(n^n) .  
  */
 
 
@@ -42,6 +48,7 @@ var sortedArrayContainsItem = function(array, item) {
 
 /*
  Complexity:
+ i think its O(n), becouse it ahas one for loop.
  */
 
 
