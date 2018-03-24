@@ -31,9 +31,9 @@ describe('Horse', function() {
 
 
   it('should not re-create new methods for each new instance', function() {
-    //This works, btw, because objects are passed by reference. So if two 
-    // functions are actually sharing the method, then a look up on both 
-    // instances will literally be the same object (triple equals). This is NOT 
+    //This works, btw, because objects are passed by reference. So if two
+    // functions are actually sharing the method, then a look up on both
+    // instances will literally be the same object (triple equals). This is NOT
     // asserting that they simply have the same text in the function.
     var princess = new Horse('Princess Twilight Sparkle');
     var fluttershy = new Horse('Fluttershy');
@@ -92,9 +92,9 @@ describe('FlyingHorse', function() {
   });
 
   it('should not re-create new methods for each instance', function() {
-    // This works, btw, because objects are passed by reference. So if two 
-    // functions are actually sharing the method, then a look up on both 
-    // instances will literally be the same object (triple equals). This is NOT 
+    // This works, btw, because objects are passed by reference. So if two
+    // functions are actually sharing the method, then a look up on both
+    // instances will literally be the same object (triple equals). This is NOT
     // asserting that they simply have the same text in the function.
     var unnamedFlyingHorse = new FlyingHorse();
     var anotherUnnamedFlyingHorse = new FlyingHorse();
@@ -110,7 +110,7 @@ describe('FlyingHorse', function() {
   it('should not allow access to `Horse.prototype.goSomewhere` method directly', function() {
     // The original makeFlyingHorse constructor function does not create an instance
     // where the Horse goSomewhere can be accessed directly. This works by looping
-    // through all properties on the FlyingHorse instance and seeing if any of them 
+    // through all properties on the FlyingHorse instance and seeing if any of them
     // contain a reference to Horse.prototype.goSomewhere.
 
     var name = 'Princess Twilight Sparkle';
