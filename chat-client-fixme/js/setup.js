@@ -13,7 +13,8 @@ var getData = function() {
   $.ajax(SERVER_URL + '?order=-createdAt', {
     contentType: 'application/json',
     success: function(data) {
-      processData(data); // eslint-disable-line no-use-before-define
+    processData(data); // eslint-disable-line no-use-before-define
+
     },
     error: function(data) {
       $('#error').prepend(' oh no').append('!');
@@ -104,6 +105,11 @@ var displayData = function(data, user) {
   });
 };
 
+
+
+// This function will send an Ajax "POST" request to the server, the function receives a message and username,that is sent as an object
+
+
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -114,6 +120,9 @@ var postData = function(message, username) {
       text: message
     }),
     success: function(data) {
+      // when the sever received the message successfully.
+      // Call the getData() method to disply the message using "Get" request.
+      getData()
       console.log('Success!', data);
     },
     error: function(data) {

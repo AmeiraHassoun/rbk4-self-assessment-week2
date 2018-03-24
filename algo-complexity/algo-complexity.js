@@ -8,8 +8,11 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity:  O(1),because the function doesn't associate with the input size. The value can be fetched using one operation ance
+ the index is known.
+
  */
+
 
 
 var retrieve = function(key) {
@@ -24,7 +27,7 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity: O(log n) The function is recursively called with half array size : 
  */
 
 
@@ -41,8 +44,8 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
- */
+ Complexity:O(n), the function implements a loop that depends on the size of the input.
+ */ 
 
 
 var hasDuplicates = function(array) {
