@@ -103,7 +103,7 @@ var displayData = function(data, user) {
     getData();
   });
 };
-
+//////postData:this the function that sends messages to the server becuse its using ajax type post
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -114,6 +114,7 @@ var postData = function(message, username) {
       text: message
     }),
     success: function(data) {
+      processData(data);
       console.log('Success!', data);
     },
     error: function(data) {
