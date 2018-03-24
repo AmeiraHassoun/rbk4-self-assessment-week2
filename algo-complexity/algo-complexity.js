@@ -1,7 +1,8 @@
 /*
   Write your explanation here as a comment.
   For example, you might say...
-    -This function has [insert time complexity], because [some line of code] means [something describing the nature of the implementation]
+    -This function has [insert time complexity], because [some line of code] means [something describing 
+    the nature of the implementation]
 */
 
 
@@ -19,8 +20,11 @@ var retrieve = function(key) {
   }
   return array[hash];
 };
+/*********************Answer
+ I think this has constant complexity which is the ideal case because i have already the key 
+so I will access the value easily
 
-
+***********************/
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
@@ -37,7 +41,12 @@ var sortedArrayContainsItem = function(array, item) {
   return sortedArrayContainsItem(halfOfArray, item);
 };
 
+/*********************Answer
+ I think this will use the binary search algorithm which means that we will divide the array
+  to the half and consider only the related one and keep dividing and cosidering till we get the right answer 
+  the complexity is logn 
 
+***********************/
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
@@ -54,3 +63,9 @@ var hasDuplicates = function(array) {
   }
   return false;
 };
+
+
+/*********************Answer
+ I think this has linear complexity because we have only one for loop to ierate over 
+ the items since n is the length of the array
+***********************/
