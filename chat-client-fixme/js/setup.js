@@ -105,6 +105,7 @@ var displayData = function(data, user) {
 };
 
 var postData = function(message, username) {
+  //here is the function thats responsible for sending messages to the server!
   $.ajax({
     url: SERVER_URL,
     contentType: 'application/json',
@@ -115,6 +116,7 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      getData();
     },
     error: function(data) {
       console.log(data);
