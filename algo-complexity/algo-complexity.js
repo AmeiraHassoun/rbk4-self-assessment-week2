@@ -9,6 +9,8 @@
 
 /*
  Complexity:
+ -This function has O(1), because the for loop is iterating over the length of the key, which is not related to n (the size of the hash table) and 
+ the line  return array[hash]  has the time complexity of retrieving from an array which is also constant 
  */
 
 
@@ -25,6 +27,8 @@ var retrieve = function(key) {
 
 /*
  Complexity:
+ -This function has O(logn) becuase  return sortedArrayContainsItem(halfOfArray, item); is ignoring half of the array and looking in the other half
+ which means in every calling for the function through this recursion n is decreasing by half. (binary search)
  */
 
 
@@ -42,6 +46,8 @@ var sortedArrayContainsItem = function(array, item) {
 
 /*
  Complexity:
+ -This function has O(n^2) becuase this line:for (var i = 0; i < array.length; i++) is iterating over the length of the array 
+ and indexOf is also iterating over the remaining length of the array (the element after array[i]) every time in the for loop
  */
 
 
