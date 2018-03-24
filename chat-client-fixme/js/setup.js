@@ -1,7 +1,7 @@
 // This will attach your set your credentials as headers for all requests sent.
 $.ajaxPrefilter(function(settings, _, jqXHR) {
-  jqXHR.setRequestHeader('X-Parse-Application-Id', '5ec0221ee8b439a1fc8fdfd6a638b3e6af1cb1b4');
-  jqXHR.setRequestHeader('X-Parse-REST-API-Key', 'bbfaf2b05152043f1b8207ba13c600d4bf296795');
+  jqXHR.setRequestHeader('X-Parse-Application-Id', 'PARSE_APP_ID');
+  jqXHR.setRequestHeader('X-Parse-REST-API-Key', 'PARSE_API_KEY');
 });
 
 //-------------- BEGIN VARIABLE/FUNCTION DECLARATIONS ---------------------
