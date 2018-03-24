@@ -22,6 +22,7 @@ var getData = function() {
 };
 
 // Here we sort the server messages by 'Created at' and send them to displayData
+
 var processData = function(data) {
   var sortedData = data.results.sort(function(a, b) {
     var aDate = new Date(a.createdAt);
@@ -103,7 +104,7 @@ var displayData = function(data, user) {
     getData();
   });
 };
-
+// this is the one which is responsible of sending the data 
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
