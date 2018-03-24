@@ -104,6 +104,9 @@ var displayData = function(data, user) {
   });
 };
 
+
+//postData is the function which is responsible  for sending messages to the server becuase it has the Post Html request using ajax
+// and it takes the message and the username as parameters and pass them as data to the server. 
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,6 +118,7 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      getData(); // this is my line of code :D
     },
     error: function(data) {
       console.log(data);
