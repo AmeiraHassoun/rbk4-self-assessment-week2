@@ -8,7 +8,10 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity: 
+
+This function have [n complexity], because it hase only one for loop, which loops n times inside the arrays
+
  */
 
 
@@ -25,6 +28,10 @@ var retrieve = function(key) {
 
 /*
  Complexity:
+
+the complexity of this function is [log n complexity], because the length of the array keeps decreasing [the function keeps on slicing the array] each time the function don't
+find the item 
+
  */
 
 
@@ -42,6 +49,9 @@ var sortedArrayContainsItem = function(array, item) {
 
 /*
  Complexity:
+
+this function have [2n complexity], the function loops inside they array and checks only.
+
  */
 
 
