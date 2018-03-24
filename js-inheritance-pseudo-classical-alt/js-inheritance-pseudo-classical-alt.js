@@ -39,10 +39,34 @@ var makeFlyingHorse = function(name, color) {
 // Here's some starter code to get you going!
 
 var Horse = function(name) {
+ var proprties={};
+  
+  proprties.name = 'Princess Twilight Sparkle';
+  
+  
+  Horse.prototype.goSomewhere= function(destination, milesToDestination) {
+  
+  Horse.prototype.goSomewhere.constructor ();
+ };
+
+
+  return proprties;
 };
 
 
 var FlyingHorse = function(name, color) {
+ var prop={};
+ proprties.name = 'Princess Twilight Sparkle';
+ proprties.color = 'purple';
+ prop.destination = 'valhalla';
+ prop.distance = 15; 
+
+ FlyingHorse.prototype.Horse= function() {
+   // body...
+   FlyingHorse.prototype.Horse.constructor ();
+ };
+
+ return prop;
 };
 
 

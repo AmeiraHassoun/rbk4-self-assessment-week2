@@ -103,6 +103,8 @@ var displayData = function(data, user) {
     getData();
   });
 };
+//Here is the function i need to send the message ::
+// 
 
 var postData = function(message, username) {
   $.ajax({
@@ -115,9 +117,19 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      $(.submit).append('text');
+      setInterval(postData,3000);
     },
     error: function(data) {
-      console.log(data);
+      console.error('Failed in sending ',data);
     }
   });
 };
+ 
+
+
+
+
+
+
+
