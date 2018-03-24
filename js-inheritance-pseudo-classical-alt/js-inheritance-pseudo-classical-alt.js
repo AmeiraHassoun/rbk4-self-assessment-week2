@@ -46,6 +46,8 @@ var Horse = function(name) {
 };
 
 
+
+
 var FlyingHorse = function(name, color) {
   Horse.call(this);
   this.color=color;
