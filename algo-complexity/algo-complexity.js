@@ -9,8 +9,10 @@
 
 /*
  Complexity:
+ retrieve function
+ -This function has (linear complexity), that means the big O is n, because the compiler have
+  to go through (for loop) and ecexute the operation n time.
  */
-
 
 var retrieve = function(key) {
   var hash = 0;
@@ -24,6 +26,9 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
+ sortedArrayContainsItem function
+-This function has (linear complexity), that means the big O is n, because the compiler have
+  to go through (recursion at the end of our code) and ecexute the operation n time.
  Complexity:
  */
 
@@ -41,6 +46,10 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
+ hasDuplicates function
+-This function has (square n complexity), that means the big O is n^2, because we have here nested
+loop(at line:57 we have for loop and inside it we have indexOf function which use for loop too),
+so compiler will execute the operation n^2 time.
  Complexity:
  */
 
