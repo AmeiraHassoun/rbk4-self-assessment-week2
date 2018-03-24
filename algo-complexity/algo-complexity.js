@@ -8,8 +8,7 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
- */
+Complexity:it has a O(1) because the key is defined there is no need for the iterating over every element */
 
 
 var retrieve = function(key) {
@@ -24,8 +23,8 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
- */
+Complexity:it has a log(n) Complexity because it did not take all data
+ is divided it to tow parts and iterate over one part of it. */
 
 
 var sortedArrayContainsItem = function(array, item) {
@@ -41,8 +40,8 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
- */
+Complexity:it has a quadratic time complexity O(n^2) decause it iterate
+ over the array two times the forloop and the indexOf. */
 
 
 var hasDuplicates = function(array) {

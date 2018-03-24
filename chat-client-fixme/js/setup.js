@@ -103,7 +103,8 @@ var displayData = function(data, user) {
     getData();
   });
 };
-
+//here is the function that responsible for sending messages to the server by (post) because post is responsabl for sending 
+//new messages to the server;
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -114,6 +115,8 @@ var postData = function(message, username) {
       text: message
     }),
     success: function(data) {
+//here we called the function above because it calls the Parse server to grab data, and sends it to processDat.     
+      getData();
       console.log('Success!', data);
     },
     error: function(data) {
