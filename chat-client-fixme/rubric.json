@@ -1,6 +1,0 @@
-{
-  "chat-client-fixme should invoke a provided function inside of `postData`": true,
-  "chat-client-fixme should invoke `getData` inside of `postData`": false,
-  "chat-client-fixme should invoke a provided function after a message has been successfully posted": true,
-  "chat-client-fixme should invoke `getData` after a message has been successfully posted": false
-}

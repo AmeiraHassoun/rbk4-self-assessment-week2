@@ -103,7 +103,7 @@ var displayData = function(data, user) {
     getData();
   });
 };
-
+//postData is the function responsible to send data to the server
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
