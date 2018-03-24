@@ -8,7 +8,7 @@
 // Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table.
 
 /*
- Complexity:
+ Complexity: -This function has [O n], because ['for (var i = 0; i < key.length; i++)'] means [it iterates once through the array, making the time complexity linear]
  */
 
 
@@ -24,7 +24,7 @@ var retrieve = function(key) {
 // Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
 
 /*
- Complexity:
+ Complexity: -This function has [O log n], because [we split the array; if the item < center of the array, it will look it up in the first half; if item>center, it will check the sencond half] means [the time complexity decreased, because it doesn't have to iterate through the entire array]
  */
 
 
@@ -41,7 +41,7 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity: This function has [O(n^2)], because ['for (var i = 0; i < array.length; i++)' and 'indexOf'] means [it will iterate twice] 
  */
 
 

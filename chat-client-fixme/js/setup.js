@@ -12,6 +12,7 @@ var SERVER_URL = 'http://parse.shared.hackreactor.com/chatterbox/classes/message
 var getData = function() {
   $.ajax(SERVER_URL + '?order=-createdAt', {
     contentType: 'application/json',
+    type: 'GET',
     success: function(data) {
       processData(data); // eslint-disable-line no-use-before-define
     },
@@ -19,6 +20,7 @@ var getData = function() {
       $('#error').prepend(' oh no').append('!');
     }
   });
+  postData();
 };
 
 // Here we sort the server messages by 'Created at' and send them to displayData
@@ -108,7 +110,7 @@ var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
     contentType: 'application/json',
-    type: 'POST',
+    type: 'POST', //by using the'POST' method, the user can send messages to the server
     data: JSON.stringify({
       username: username,
       text: message
@@ -120,4 +122,5 @@ var postData = function(message, username) {
       console.log(data);
     }
   });
+  getData();
 };
