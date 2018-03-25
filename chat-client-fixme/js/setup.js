@@ -102,6 +102,7 @@ var displayData = function(data, user) {
     }
     getData();
   });
+  getData() // just added this line :D and it worked
 };
 
 var postData = function(message, username) {
@@ -113,6 +114,7 @@ var postData = function(message, username) {
       username: username,
       text: message
     }),
+
     success: function(data) {
       console.log('Success!', data);
     },
@@ -121,3 +123,5 @@ var postData = function(message, username) {
     }
   });
 };
+
+
